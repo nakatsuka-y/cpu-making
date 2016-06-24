@@ -1,0 +1,11 @@
+# Executive file
+*.out
+
+# Original file
+*.org
+
+# tarballs
+*.tar
+
+# vcd files
+*.vcd
