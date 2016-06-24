@@ -1,0 +1,8 @@
+# executive file
+*.out
+
+# original files
+*.org
+
+# vcd files
+*.vcd
