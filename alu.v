@@ -1,13 +1,13 @@
 //alu.v
 module alu(in0,in1,op,zf,out);
 	input wire [7:0] in0,in1;
-	input wire [3:0] op;
+	input wire [4:0] op;
 	output reg zf;
 	output reg [7:0] out;
 
 	`include "def.h"
 
-	assign reg6=regfile[6];
+	//assign reg6=regfile[6];
 
 	always @(*) begin
 		case(op)
@@ -88,6 +88,39 @@ module alu(in0,in1,op,zf,out);
 		end
 
 		FB_90 : begin
+			case (in0[2:0])
+				3'b000 : out <= in0;
+				3'b101 : out <= in0;
+				3'b001 : out <= {in0[7:3],3'b100};
+				3'b010 : out <= {in0[7:3],3'b001};
+				3'b011 : out <= {in0[7:3],3'b010};
+				3'b100 : out <= {in0[7:3],3'b011};
+			endcase
+		end
+
+		RL_180 : begin
+			case (in0[2:0])
+				3'b001 : out <= in0;
+				3'b011 : out <= in0;
+				3'b000 : out <= {in0[7:3],3'b010};
+				3'b010 : out <= {in0[7:3],3'b101};
+				3'b101 : out <= {in0[7:3],3'b100};
+				3'b100 : out <= {in0[7:3],3'b000};
+			endcase
+		end
+
+		UD_180 : begin
+			case (in0[2:0])
+				3'b010 : out <= in0;
+				3'b100 : out <= in0;
+				3'b000 : out <= {in0[7:3],3'b001};
+				3'b001 : out <= {in0[7:3],3'b101};
+				3'b101 : out <= {in0[7:3],3'b011};
+				3'b011 : out <= {in0[7:3],3'b000};
+			endcase
+		end
+
+		FB_180 : begin
 			case (in0[2:0])
 				3'b000 : out <= in0;
 				3'b101 : out <= in0;
