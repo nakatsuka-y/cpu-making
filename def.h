@@ -1,3 +1,4 @@
-parameter [4:0] MOV = 5'h0,ZNJ = 5'h1,RL_270 = 5'h2,UD_270 = 5'h3,INC = 5'h4,DEC = 5'h5,LOAD = 5'h6,CHECK = 5'h7,FB_270 = 5'h8,STORE = 5'h9,LI = 5'ha,JMP = 5'hb,JNZ = 5'hc,RL_90 = 5'hd,UD_90 = 5'he,FB_90 = 5'hf;
+parameter [4:0] MOV = 5'b00000,ZNJ = 5'b00001,RL_270 = 5'b00010,UD_270 = 5'b00011,INC = 5'b00100,DEC = 5'b00101,LOAD = 5'b00110,CHECK = 5'b00111,FB_270 = 5'b01000,STORE = 5'b01001,LI = 5'b01010,JMP = 5'b01011,JNZ = 5'b01100,RL_90 = 5'b01101,UD_90 = 5'b01110,FB_90 = 5'b01111;
+
 
 parameter [7:0] TMP = 31,DC = 30,UC = 29,FC = 28,RC = 27,UF = 26,FF = 25,RF = 24,AUC = 23,STEP = 22,STEPADDR = 21;
