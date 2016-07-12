@@ -1,3 +1,8 @@
-parameter [3:0] MOV = 4'h0,ZNJ = 4'h1,RL_270 = 4'h2,UD_270 = 4'h3,INC = 4'h4,DEC = 4'h5,LOAD = 4'h6,CHECK = 4'h7,FB_270 = 4'h8,STORE = 4'h9,LI = 4'ha,JMP = 4'hb,JNZ = 4'hc,RL_90 = 4'hd,UD_90 = 4'he,FB_90 = 4'hf;
+parameter [4:0] MOV = 5'b00000,ZNJ = 5'b00001,RL_270 = 5'b00010,UD_270 = 5'b00011,INC = 5'b00100,DEC = 5'b00101,LOAD = 5'b00110,CHECK = 5'b00111,FB_270 = 5'b01000,STORE = 5'b01001,LI = 5'b01010,JMP = 5'b01011,JNZ = 5'b01100,RL_90 = 5'b01101,UD_90 = 5'b01110,FB_90 = 5'b01111,RL_180 = 5'b10000,UD_180 = 5'b10001,FB_180 = 5'b10010;
+parameter [7:0] DC=17,DR0=18,DR1=19,DR2=20,TMP=21,OP_TMP=22;
 
-parameter [7:0] TMP = 31,DC = 30,UC = 29,FC = 28,RC = 27,UF = 26,FF = 25,RF = 24,AUC = 23,STEP = 22,STEPADDR = 21;
+parameter a_block=12,b_block=29,c_block=103,d_block=136;
+
+parameter [2:0] ZERO=3'b000,ONE=3'b001,TWO=3'b010,THREE=3'b011,FOUR=3'b100,FIVE=3'b101,SIX=3'b110,SEVEN=3'b111;
+
+parameter [2:0] UP=3'b010,DOWN=3'b100,FRO=3'b000,BAC=3'b101,RIG=3'b001,LEF=3'b011;

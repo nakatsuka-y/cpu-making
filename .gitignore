@@ -6,3 +6,6 @@
 
 # vcd files
 *.vcd
+
+# tar files
+*.tar

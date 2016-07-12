@@ -1,13 +1,13 @@
 //memory.v
-module memory(din,dout,addr,we,clk,rst,mem8,mem9,mem10,mem11,mem12,mem13,mem14,mem15,mem16,mem17,mem18,mem19,mem20,mem21,mem22,mem23,mem24,mem25,mem26,mem27);
+module memory(din,dout,addr,we,clk,rst,mem0,mem1,mem2,mem3,mem4,mem5,mem6,mem7);
 	input [7:0] din,addr;
 	input we,clk,rst;
 	output wire [7:0] dout;
-	output wire [7:0] mem8,mem9,mem10,mem11,mem12,mem13,mem14,mem15,mem16,mem17,mem18,mem19,mem20,mem21,mem22,mem23,mem24,mem25,mem26,mem27;
+	output wire [7:0] mem0,mem1,mem2,mem3,mem4,mem5,mem6,mem7;
 
 	reg [7:0] memfile [0:255];
 
-	wire [7:0] mem0,mem1,mem2,mem3,mem4,mem5,mem6,mem7;
+//	wire [7:0] mem0,mem1,mem2,mem3,mem4,mem5,mem6,mem7;
 
 	always @(posedge clk) begin
 		if(!rst) begin

@@ -7,7 +7,7 @@ module register(src0,src1,we,dst,data0,data1,data,clk,rst);
 
 	reg [7:0] regfile [0:31];
 
-	wire [7:0] reg0,reg1,reg2,reg3,reg4,reg5,reg6,reg7,STEPADDR,STEP,AUC,RF,FF,UF,RC,FC,UC,DC,TMP;
+	wire [7:0] reg0,reg1,reg2,reg3,reg4,reg5,reg6,reg7,DC,DR0,DR1,DR2,OP_TMP;
 
 	always @(posedge clk) begin
 		if(!rst) begin
@@ -63,16 +63,11 @@ module register(src0,src1,we,dst,data0,data1,data,clk,rst);
 	assign reg5=regfile[5];
 	assign reg6=regfile[6];
 	assign reg7=regfile[7];
-	assign STEPADDR=regfile[21];
-	assign STEP=regfile[22];
-	assign AUC=regfile[23];
-	assign RF=regfile[24];
-	assign FF=regfile[25];
-	assign UF=regfile[26];
-	assign RC=regfile[27];
-	assign FC=regfile[28];
-	assign UC=regfile[29];
-	assign DC=regfile[30];
-	assign TMP=regfile[31];
+	assign DC=regfile[17];
+	assign DR1=regfile[18];
+	assign DR2=regfile[19];
+	assign DR3=regfile[20];
+	assign TMP=regfile[21];
+	assign OP_TMP=regfile[22];
 
 endmodule

@@ -2,11 +2,11 @@
 
 module test;
 	reg clk,rst;
-	wire [7:0] mem8,mem9,mem10,mem11,mem12,mem13,mem14,mem15,mem16,mem17,mem18,mem19,mem20,mem21,mem22,mem23,mem24,mem25,mem26,mem27;
+	wire [7:0] mem0,mem1,mem2,mem3,mem4,mem5,mem6,mem7;
 
 	parameter STEP=10;
 
-	top t0(clk,rst,mem8,mem9,mem10,mem11,mem12,mem13,mem14,mem15,mem16,mem17,mem18,mem19,mem20,mem21,mem22,mem23,mem24,mem25,mem26,mem27);
+	top t0(clk,rst,mem0,mem1,mem2,mem3,mem4,mem5,mem6,mem7);
 
 	always #(STEP/2) clk =~ clk;
 
@@ -16,7 +16,7 @@ module test;
 //		$dumplimit(1000000);
 		clk=0;
 		rst=0;
-		$monitor($stime,": mem8:%d,mem9:%d,mem10:%d,mem11:%d,mem12:%d,mem13:%d,mem14:%d,mem15:%d,mem16:%d,mem17:%d,mem18:%d,mem19:%d,mem20:%d,mem21:%d,mem22:%d,mem23:%d,mem24:%d,mem25:%d,mem26:%d,mem27:%d",mem8,mem9,mem10,mem11,mem12,mem13,mem14,mem15,mem16,mem17,mem18,mem19,mem20,mem21,mem22,mem23,mem24,mem25,mem26,mem27);
+		$monitor($stime,": mem0:%b,mem1:%b,mem2:%b,mem3:%b,mem4:%b,mem5:%b,mem6:%b,mem7:%b",mem0,mem1,mem2,mem3,mem4,mem5,mem6,mem7);
 	#STEP
 		rst=1;
 	#(STEP*1000000000);
